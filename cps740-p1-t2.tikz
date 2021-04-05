@@ -1,0 +1,157 @@
+\begin{tikzpicture}[>= stealth, v/.style = {draw, circle}]
+\def \n {5}
+\def \r {2pt}
+\def \outerradius {1.50cm}
+\def \innerradius {0.75cm}
+\def \m {11}
+\def \k {10}
+
+\node (\m) at (0, 0) {};
+
+\foreach \s in {1,...,\n}
+{
+	\node (\s) at ({360/\n * (\s - 1) + 90/\n}:\outerradius) {};
+}
+
+\foreach \s in {6,...,\k} {
+	\node (\s) at ({360/\n * (\s - 1) + 90/\n}:\innerradius) {};
+	\draw [gray, thick] (\s) -- (\m);
+}
+
+\draw [fill=blue!20] (1) circle [radius=\r];
+\draw [fill=blue!20] (2) circle [radius=\r];
+\draw [fill=blue!20] (3) circle [radius=\r];
+\draw [fill=blue!20] (4) circle [radius=\r];
+\draw [fill=blue!20] (5) circle [radius=\r];
+\draw [fill=blue!20] (6) circle [radius=\r];
+\draw [fill=blue!20] (7) circle [radius=\r];
+\draw [fill=blue!20] (8) circle [radius=\r];
+\draw [fill=blue!20] (9) circle [radius=\r];
+\draw [fill=blue!20] (10) circle [radius=\r];
+\draw [fill=blue!20] (11) circle [radius=\r];
+
+\draw [gray, thick] (1) -- (2);
+\draw [gray, thick] (2) -- (3);
+\draw [gray, thick] (3) -- (4);
+\draw [gray, thick] (4) -- (5);
+\draw [gray, thick] (5) -- (1);
+
+\draw [gray, thick] (6) -- (2);
+\draw [gray, thick] (6) -- (5);
+
+\draw [gray, thick] (7) -- (1);
+\draw [gray, thick] (7) -- (3);
+
+\draw [gray, thick] (8) -- (2);
+\draw [gray, thick] (8) -- (4);
+
+\draw [gray, thick] (9) -- (3);
+\draw [gray, thick] (9) -- (5);
+
+\draw [gray, thick] (10) -- (1);
+\draw [gray, thick] (10) -- (4);
+\end{tikzpicture}
+\hspace{0.5cm}
+\begin{tikzpicture}[>= stealth, v/.style = {draw, circle}]
+\def \n {5}
+\def \r {2pt}
+\def \outerradius {1.50cm}
+\def \innerradius {0.75cm}
+\def \m {11}
+\def \k {10}
+
+\node (\m) at (0, 0) {};
+
+\foreach \s in {1,...,\n}
+{
+	\node (\s) at ({360/\n * (\s - 1) + 90/\n}:\outerradius) {};
+}
+
+\foreach \s in {6,8} {
+	\node (\s) at ({360/\n * (\s - 1) + 90/\n}:\innerradius) {};
+	\draw [gray, thick] (\s) -- (\m);
+}
+
+\foreach \s in {7, 9, 10} {
+	\node (\s) at ({360/\n * (\s - 1) + 90/\n}:\innerradius) {};
+	\draw [orange!40, thick] (\s) -- (\m);
+}
+
+\draw [fill=red!20] (1) circle [radius=\r];
+\draw [fill=blue!20] (2) circle [radius=\r];
+\draw [fill=red!20] (3) circle [radius=\r];
+\draw [fill=orange!20] (4) circle [radius=\r];
+\draw [fill=orange!20] (5) circle [radius=\r];
+\draw [fill=blue!20] (6) circle [radius=\r];
+\draw [fill=yellow!20] (7) circle [radius=\r];
+\draw [fill=blue!20] (8) circle [radius=\r];
+\draw [fill=yellow!20] (9) circle [radius=\r];
+\draw [fill=yellow!20] (10) circle [radius=\r];
+\draw [fill=red!20] (11) circle [radius=\r];
+
+\draw [gray, thick] (1) -- (2);
+\draw [gray, thick] (2) -- (3);
+\draw [orange!40, thick, dashed] (3) -- (4);
+\draw [gray, thick] (4) -- (5);
+\draw [orange!40, thick, dashed] (5) -- (1);
+
+\draw [gray, thick] (6) -- (2);
+\draw [gray, thick] (6) -- (5);
+
+\draw [orange!40, thick] (7) -- (1);
+\draw [orange!40, thick] (7) -- (3);
+
+\draw [gray, thick] (8) -- (2);
+\draw [gray, thick] (8) -- (4);
+
+\draw [orange!40, thick] (9) -- (3);
+\draw [orange!40, thick, dashed] (9) -- (5);
+
+\draw [orange!40, thick] (10) -- (1);
+\draw [orange!40, thick, dashed] (10) -- (4);
+\end{tikzpicture}
+\hspace{0.5cm}
+\begin{tikzpicture}[>= stealth, v/.style = {draw, circle}]
+\def \r {2pt}
+
+\node (1) at (0, 2) {};
+\node (3) at (0, 1) {};
+\node (5) at (0, 0) {};
+
+\node (2) at (2, 2) {};
+\node (4) at (2, 1) {};
+\node (6) at (2, 0) {};
+
+\node (x) at (1, 2) {};
+\node (y) at (1, 0) {};
+
+\draw [fill=red!20] (1) circle [radius=\r];
+\draw [fill=red!20] (3) circle [radius=\r];
+\draw [fill=red!20] (5) circle [radius=\r];
+
+\draw [fill=yellow!20] (2) circle [radius=\r];
+\draw [fill=yellow!20] (4) circle [radius=\r];
+\draw [fill=yellow!20] (6) circle [radius=\r];
+
+\draw [fill=orange!20] (x) circle [radius=\r];
+\draw [fill=orange!20] (y) circle [radius=\r];
+
+\draw [orange!40, thick, dashed] (1) -- (x);
+\draw [orange!40, thick, dashed] (x) -- (2);
+
+\draw [orange!40, thick, dashed] (5) -- (y);
+\draw [orange!40, thick, dashed] (y) -- (6);
+
+%\draw [orange!40, thick] (1) -- (2);
+\draw [orange!40, thick] (1) -- (4);
+\draw [orange!40, thick] (1) -- (6);
+
+\draw [orange!40, thick] (3) -- (2);
+\draw [orange!40, thick] (3) -- (4);
+\draw [orange!40, thick] (3) -- (6);
+
+\draw [orange!40, thick] (5) -- (2);
+\draw [orange!40, thick] (5) -- (4);
+%\draw [orange!40, thick] (5) -- (6);
+
+\end{tikzpicture}

@@ -1,0 +1,40 @@
+\begin{tikzpicture}[>= stealth, v/.style = {draw, circle}]
+\node (p1) at (-0.1, 0.0) {};
+\node (p2) at ( 0.5, 1.3) {};
+\node (p3) at ( 0.8, 0.2) {};
+
+\gvertex[fill=yellow!30]{pv1}{0.1}{0.2}
+\gvertex[fill=blue!30]{pv2}{0.4}{0.1}
+\gvertex[fill=yellow!30]{pv3}{0.65}{0.6}
+\gvertex[fill=blue!30]{pv4}{0.7}{0.4}
+\gvertex[fill=yellow!30]{pv5}{0.25}{0.8}
+\gvertex[fill=red!30]{pv6}{0.55}{0.9}
+\gvertex[fill=blue!30]{pv7}{0.2}{0.45}
+\gvertex[fill=red!30]{pv8}{0.45}{0.3}
+	
+\node (plbl) at (0.35, -0.5) {$G_1$};
+	
+%% -------------------------	
+	
+\node (q1) at (1.1, 0.1) {};
+\node (q2) at (1.6, 1.4) {};
+\node (q3) at (2.1, 0.0) {};
+\begin{pgfonlayer}{background}
+	\path[expand bubble, fill=blue!10] plot [smooth cycle,tension=1] coordinates {(p1) (p2) (p3)};
+	\path[expand bubble, fill=yellow!25] plot [smooth cycle,tension=1] coordinates {(q1) (q2) (q3)};
+\end{pgfonlayer}
+	
+\gvertex[fill=teal!50]{qv1}{1.3}{0.35}
+\gvertex[fill=blue!30]{qv2}{1.4}{0.1}
+\gvertex[fill=yellow!30]{qv3}{1.5}{0.25}
+\gvertex[fill=blue!30]{qv4}{1.55}{0.6}
+\gvertex[fill=yellow!30]{qv5}{1.6}{0.8}
+\gvertex[fill=red!30]{qv6}{1.65}{1.1}
+\gvertex[fill=blue!30]{qv7}{1.35}{0.9}
+\gvertex[fill=teal!50]{qv8}{1.8}{0.3}
+\gvertex[fill=red!30]{qv9}{1.9}{0.0}
+
+%\draw [green!18, thick] (pv4) -- (qv7);
+	
+\node (qlbl) at (1.65, -0.5) {$G_2$};
+\end{tikzpicture}

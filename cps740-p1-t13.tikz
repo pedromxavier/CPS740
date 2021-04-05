@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>= stealth, v/.style = {draw, circle}]
+	\pgfmathsetseed{\seed}
+	\draw[yellow!30, fill=yellow!30] (-\textwidth/8, \textwidth/4 + \textwidth/16) rectangle (\textwidth/8, -\textwidth/4-\textwidth/16);
+	\draw[gray!30, dashed] (0, \textwidth/4 + \textwidth/16) -- (0, -\textwidth/4-\textwidth/16);	
+	\foreach \i in {0,1,2,3}{
+		\foreach \j in {0,1}{
+			\def\x{-\textwidth/8 + \textwidth/8 * \j}
+			\def\y{\textwidth/4 - \textwidth/8 * \i}
+			\draw[black!50, thick] (\x, \y) rectangle (\x + \textwidth/8, \y - \textwidth/8);
+			
+			\pgfmathsetmacro{\ncol}{(\j > 0)? "red!30": "blue!30"}
+			\draw[fill=\ncol](\x + \textwidth/16 + rand * 5, \y - \textwidth/16 + rand * 5) circle (3pt);
+		}
+	}
+	\node (rr) [] at (\textwidth/8 + \textwidth/32, 0) {$2r$};
+	
+	\node (r)[] at (0, -\textwidth/4 - \textwidth/32) {$r$};
+	
+\end{tikzpicture}

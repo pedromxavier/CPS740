@@ -1,0 +1,23 @@
+\begin{fig}
+\begin{tikzpicture}[>= stealth, auto, every node/.style = {scale=1.4}, v/.style = {draw, circle}, edge/.style = {draw, -}, scale = 1.4]
+%% Vertices
+	\node (A) [v, violet!75, fill=white] at (1.0, 0) {A};
+	\node (B) [v, violet!75, fill=white] at (2.0, -1.5) {B};
+	\node (C) [v, violet!75, fill=white] at (4.0, -1.5) {C};
+	\node (D) [v, violet!75, fill=white] at (5.0, 0) {D};
+	\node (E) [v, violet!75, fill=white] at (2.0, 1.5) {E};
+	\node (F) [v, violet!75, fill=white] at (4.0, 1.5) {F};
+
+%% Edges
+	\draw [edge, violet!75, swap] (A) edge node {} (B);
+	\draw [edge, violet!75] (A) edge node {} (E);
+	\draw [edge, violet!75, swap] (B) edge node {} (C);
+	\draw [edge, violet!75] (B) edge node {} (D);
+	\draw [edge, violet!75] (E) edge node {} (F);
+	\draw [edge, violet!75, swap] (B) edge node {} (A);
+	\draw [edge, violet!75] (E) edge node {} (A);
+	\draw [edge, violet!75, swap] (C) edge node {} (B);
+	\draw [edge, violet!75] (D) edge node {} (B);
+	\draw [edge, violet!75] (F) edge node {} (E);
+\end{tikzpicture}
+\end{fig}

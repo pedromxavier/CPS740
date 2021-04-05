@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>= stealth, auto, every node/.style = {scale=1.0}, v/.style = {draw, circle}, edge/.style = {draw, ->}, bend angle = 15, scale = 1.0]
+%% Vertices
+	\node (s) [v, black, fill=white] at (-4.0, 0) {$s$};
+	\node (v1) [v, black, fill=white] at (-2.0, 1.5) {$v_1$};
+	\node (v2) [v, black, fill=white] at (-2.0, -1.5) {$v_2$};
+	\node (v3) [v, black, fill=white] at (2.0, 1.5) {$v_3$};
+	\node (v4) [v, black, fill=white] at (2.0, -1.5) {$v_4$};
+	\node (t) [v, black, fill=white] at (4.0, 0) {$t$};
+
+%% Edges
+	\draw [edge] (s) edge  node {$16/9$} (v1);
+	\draw [edge, swap] (s) edge  node {$13/5$} (v2);
+	\draw [edge] (v2) edge  node {$4/3$} (v1);
+	\draw [edge] (v1) edge  node {$12/12$} (v3);
+	\draw [edge, swap] (v3) edge  node {$9/7$} (v2);
+	\draw [edge, swap] (v2) edge  node {$14/9$} (v4);
+	\draw [edge, swap] (v4) edge  node {$7/7$} (v3);
+	\draw [edge] (v3) edge  node {$20/12$} (t);
+	\draw [edge, swap] (v4) edge  node {$4/2$} (t);
+\end{tikzpicture}

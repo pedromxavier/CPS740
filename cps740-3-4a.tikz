@@ -1,0 +1,40 @@
+\begin{tikzpicture}[
+->,
+>=stealth,
+shorten >=1pt,
+auto,
+thick,
+every node/.style={minimum size=0pt, minimum width = 0em, minimum height = 0em, font={\tiny\bfseries}},
+vertex/.style={circle,fill=white,draw, minimum width = 3em, minimum height = 3em,
+font={\normalsize\bfseries}},
+edge/.style={->}
+]
+	\def\dx{2.5}
+	\def\dy{2.0}
+	\node [vertex] (s) [] at (0, 0) [minimum size=20pt] {$s$};
+	\node [vertex] (v1) [] at (\dx, 0) [minimum size=20pt] {$v_1$};
+	\node [vertex] (v2) [] at (\dx*1.5, -\dy) [minimum size=20pt] {$v_2$};
+	\node [vertex] (v3) [] at (\dx*1.5, \dy) [minimum size=20pt] {\color{blue!75}$v_3$};
+	\node [vertex] (v4) [] at (\dx*2, 0) [minimum size=20pt] {$v_4$};
+	\node [vertex] (v5) [] at (\dx*3, 0) [minimum size=20pt] {$v_5$};
+	\node [vertex] (t) [] at (\dx*4, 0) [minimum size=20pt] {$t$};
+	
+	\draw [edge] (s) -- node[xshift=0, yshift=-2pt] {$8/8$} (v1);
+	\draw [edge, swap] (s) -- node[xshift=0, yshift=0] {$5/4$} (v2);
+	\draw [edge, blue!75] (s) -- node[xshift=0, yshift=0] {$10/3$} (v3);
+	
+	\draw [edge] (v1) -- node[xshift=-5pt, yshift=0] {$10/2$} (v2);
+	\draw [edge, swap] (v1) -- node[xshift=-2pt, yshift=2pt] {$3/3$} (v3);
+	\draw [edge] (v1) -- node[xshift=0, yshift=-2pt] {$5/3$} (v4);
+	
+	\draw [edge] (v2) -- node[xshift=5pt, yshift=0] {$3/0$} (v4);
+	\draw [edge] (v2) -- node[xshift=3pt, yshift=-3pt] {$6/5$} (v5);
+	\draw [edge, swap] (v2) -- node {$5/1$} (t);
+	
+	\draw [edge, swap] (v3) -- node[xshift=2pt, yshift=2pt] {$5/3$} (v4);
+	\draw [edge, swap] (v3) -- node[xshift=2pt, yshift=2pt] {$3/0$} (v5);
+	\draw [edge, blue!75] (v3) -- node[xshift=0, yshift=0] {$4/3$} (t);
+	
+	\draw [edge] (v4) -- node[xshift=-5pt, yshift=-2pt] {$8/6$} (v5);
+	\draw [edge] (v5) -- node[xshift=-10pt, yshift=-2pt] {$12/11$} (t);
+\end{tikzpicture}

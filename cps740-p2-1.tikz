@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>= stealth, auto, every node/.style = {scale=1.4}, v/.style = {draw, circle}, edge/.style = {draw, -}, scale = 1.4]
+%% Vertices
+	\node (A) [v, black, fill=white] at (1.0, 0) {A};
+	\node (B) [v, black, fill=white] at (2.0, -1.5) {B};
+	\node (C) [v, black, fill=white] at (4.0, -1.5) {C};
+	\node (D) [v, black, fill=white] at (5.0, 0) {D};
+	\node (E) [v, black, fill=white] at (2.0, 1.5) {E};
+	\node (F) [v, black, fill=white] at (4.0, 1.5) {F};
+
+%% Edges
+	\draw [edge, swap] (A) edge node {$10$} (B);
+	\draw [edge] (A) edge node {$4$} (E);
+	\draw [edge, swap] (B) edge node {$1$} (C);
+	\draw [edge] (B) edge node {$2$} (D);
+	\draw [edge, swap] (B) edge node {$7$} (E);
+	\draw [edge, swap] (C) edge node {$9$} (D);
+	\draw [edge, swap] (D) edge node {$11$} (F);
+	\draw [edge] (E) edge node {$12$} (F);
+\end{tikzpicture}

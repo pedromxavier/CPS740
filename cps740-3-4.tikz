@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>= stealth, auto, v/.style = {draw, circle}, edge/.style={draw=black!50, thick, ->, font={\tiny}}]
+	\def\dx{2.5}
+	\def\dy{2.0}
+	\node [vertex] (s) [] at (0, 0) [minimum size=20pt] {$s$};
+	\node [vertex] (v1) [] at (\dx, 0) [minimum size=20pt] {$v_1$};
+	\node [vertex] (v2) [] at (\dx*1.5, -\dy) [minimum size=20pt] {$v_2$};
+	\node [vertex] (v3) [] at (\dx*1.5, \dy) [minimum size=20pt] {$v_3$};
+	\node [vertex] (v4) [] at (\dx*2, 0) [minimum size=20pt] {$v_4$};
+	\node [vertex] (v5) [] at (\dx*3, 0) [minimum size=20pt] {$v_5$};
+	\node [vertex] (t) [] at (\dx*4, 0) [minimum size=20pt] {$t$};
+	
+	\draw [edge] (s) edge node {$8/8$} (v1);
+	\draw [edge, swap] (s) edge node {$5/4$} (v2);
+	\draw [edge] (s) edge node {$10/3$} (v3);
+	
+	\draw [edge, swap] (v1) edge node {$10/2$} (v2);
+	\draw [edge, swap] (v1) edge node {$3/3$} (v3);
+	\draw [edge] (v1) edge node {$5/3$} (v4);
+	
+	\draw [edge] (v2) edge node {$3/0$} (v4);
+	\draw [edge] (v2) edge node {$6/5$} (v5);
+	\draw [edge, swap] (v2) edge node {$5/1$} (t);
+	
+	\draw [edge] (v3) edge node {$5/3$} (v4);
+	\draw [edge] (v3) edge node {$3/0$} (v5);
+	\draw [edge] (v3) edge node {$4/3$} (t);
+	
+	\draw [edge] (v4) edge node {$8/6$} (v5);
+	\draw [edge] (v5) edge node {$12/11$} (t);
+\end{tikzpicture}

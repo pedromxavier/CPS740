@@ -1,0 +1,68 @@
+\begin{tikzpicture}[>= stealth, v/.style = {draw, circle}]
+\draw (0,0) ellipse (0.6cm and 1.2cm);
+\node [] at (0, -1.5cm) {$V_1$};
+
+\gvertex[fill=yellow!40]{1}{0}{0}
+\gvertex[fill=yellow!40]{2}{0.3}{0.2}
+\gvertex[fill=yellow!40]{3}{0.1}{0.5}
+\gvertex[fill=yellow!40]{4}{0.15}{-0.8}
+\gvertex[fill=yellow!40]{5}{-0.2}{-0.5}
+\gvertex[fill=yellow!40]{6}{-0.2}{0.8}			
+
+\draw (2,0) ellipse (0.6cm and 1.2cm);
+\node [] at (2, -1.5cm) {$V_2$};
+
+\gvertex[fill=red!30]{7}{2}{-0.1}
+\gvertex[fill=red!30]{8}{2.3}{0.2}
+\gvertex[fill=red!30]{9}{1.9}{-1.0}
+\gvertex[fill=red!30]{10}{2.2}{0.7}
+\gvertex[fill=red!30]{11}{1.7}{-0.6}
+\gvertex[fill=red!30]{12}{1.8}{0.9}
+\gvertex[fill=red!30]{13}{2.1}{-0.4}
+
+%%
+\foreach \i in {1,...,6}
+{
+	\foreach \j in {7,...,13}{
+		\glink[orange!40]{\i}{\j}
+	}
+}
+\end{tikzpicture}
+\hspace{2cm}
+\begin{tikzpicture}[>= stealth, v/.style = {draw, circle}]
+\draw (0,0) ellipse (0.6cm and 1.2cm);
+\node [] at (0, -1.5cm) {$V_1$};
+
+\gvertex[fill=yellow!40]{1}{0}{0}
+\gvertex[fill=yellow!40]{2}{0.3}{0.2}
+\gvertex[fill=yellow!40]{3}{0.1}{0.5}
+\gvertex[fill=yellow!40]{4}{0.15}{-0.8}
+\gvertex[fill=yellow!40]{5}{-0.2}{-0.5}
+\gvertex[fill=yellow!40]{6}{-0.2}{0.8}			
+
+\draw (2,0) ellipse (0.6cm and 1.2cm);
+\node [] at (2, -1.5cm) {$V_2$};
+
+\gvertex[fill=red!30]{7}{2}{-0.1}
+\gvertex[fill=red!30]{8}{2.3}{0.2}
+\gvertex[fill=red!30]{9}{1.9}{-1.0}
+\gvertex[fill=red!30]{10}{2.2}{0.7}
+\gvertex[fill=red!30]{11}{1.7}{-0.6}
+\gvertex[fill=red!30]{12}{1.8}{0.9}
+\gvertex[fill=red!30]{13}{2.1}{-0.4}
+
+%%
+\foreach \i in {1,...,6}
+{
+	\foreach \j in {1,...,6}{
+		\glink[yellow!40]{\i}{\j}
+	}
+}
+
+\foreach \i in {7,...,13}
+{
+	\foreach \j in {7,...,13}{
+		\glink[red!30]{\i}{\j}
+	}
+}
+\end{tikzpicture}

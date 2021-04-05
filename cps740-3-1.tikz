@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>= stealth, auto, v/.style = {draw, circle}, edge/.style={dashed, draw=gray!50, thick}, edgex/.style={thick, blue!50}]
+	\def\dx{3}
+	\def\dy{2}
+	\node [vertex] (A) [] at (-\dx, 0) [minimum size=20pt] {A};
+	\node [vertex] (B) [] at (0, \dy) [minimum size=20pt] {B};
+	\node [vertex] (C) [] at (0, 0) [minimum size=20pt] {C};
+	\node [vertex] (D) [] at (0, -\dy) [minimum size=20pt] {D};
+	\node [vertex] (E) [] at (\dx, 0) [minimum size=20pt] {E};
+	\node [vertex] (F) [] at (\dx, -\dy) [minimum size=20pt] {F};
+	\node [vertex] (G) [] at (2 * \dx, 0) [minimum size=20pt] {G};
+	
+	\draw [edgex] (A) edge node {\color{black} 1} (B);
+	\draw [edge] (A) edge node {3} (C);
+	\draw [edge] (A) edge node {4} (D);
+	\draw [edgex, swap] (B) edge node {\color{black} 3} (C);
+	\draw [edge] (B) edge node {4} (G);
+	\draw [edge, swap] (B) edge node {8} (E);
+	\draw [edgex] (C) edge node {\color{black} 1} (D);
+	\draw [edgex] (D) edge node {\color{black} 4} (E);
+	\draw [edge] (D) edge node {2} (F);
+	\draw [edgex, swap] (E) edge node {\color{black} 1} (G);
+	\draw [edgex, swap] (F) edge node {\color{black} 4} (G);
+\end{tikzpicture}
+~\hspace{20pt}
+\begin{tikzpicture}
+	\drawstack{A, B, C, D, E, G, F}{0}{0}
+\end{tikzpicture}

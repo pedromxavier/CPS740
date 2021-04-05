@@ -1,0 +1,73 @@
+\begin{tikzpicture}[
+>=stealth,
+shorten >=1pt,
+auto,
+thick,
+every node/.style={minimum size=0pt, minimum width = 0em, minimum height = 0em, font={\bfseries}},
+vertex/.style={circle,fill=white,draw, minimum width = 3em, minimum height = 3em,
+font={\normalsize\bfseries}},
+edge/.style={-}
+]
+
+%% 2v3
+\node [vertex] (2v3) [] at (4.92, 3.82) [minimum size=20pt] {(2, 3)};
+%% 2v5
+\node [vertex] (2v5) [] at (3.51, 1.57) [minimum size=20pt] {(2, 5)};
+%% 2v7
+\node [vertex] (2v7) [] at (2.03, 2.73) [minimum size=20pt] {(2, 7)};
+%% 3v2
+\node [vertex] (3v2) [] at (0.00, 5.60) [minimum size=20pt] {(3, 2)};
+%% 3v5
+\node [vertex] (3v5) [] at (-3.60, 4.85) [minimum size=20pt] {(3, 5)};
+%% 3v7
+\node [vertex] (3v7) [] at (-3.51, 1.57) [minimum size=20pt] {(3, 7)};
+%% 5v2
+\node [vertex] (5v2) [] at (-4.05, 0.00) [minimum size=20pt] {(5, 2)};
+%% 5v3
+\node [vertex] (5v3) [] at (-6.24, -2.80) [minimum size=20pt] {(5, 3)};
+%% 5v7
+\node [vertex] (5v7) [] at (-3.60, -4.85) [minimum size=20pt] {(5, 7)};
+%% 7v2
+\node [vertex] (7v2) [] at (-0.00, -3.15) [minimum size=20pt] {(7, 2)};
+%% 7v3
+\node [vertex] (7v3) [] at (2.03, -2.73) [minimum size=20pt] {(7, 3)};
+%% 7v5
+\node [vertex] (7v5) [] at (1.80, -5.22) [minimum size=20pt] {(7, 5)};
+%% 2v3 -> 3v2
+\draw [edge ,blue!40 ,swap] (2v3) -- node[xshift=0.00, yshift=0.00] {5} (3v2);
+%% 2v5 -> 5v2
+\draw [edge ,blue!40 ,swap] (2v5) -- node[xshift=0.00, yshift=0.00] {7} (5v2);
+%% 2v7 -> 7v2
+\draw [edge ,blue!40 ] (2v7) -- node[xshift=0.00, yshift=0.00] {9} (7v2);
+%% 3v5 -> 5v3
+\draw [edge ,blue!40 ,swap] (3v5) -- node[xshift=0.00, yshift=0.00] {8} (5v3);
+%% 3v7 -> 7v3
+\draw [edge ,blue!40 ,swap] (3v7) -- node[xshift=0.00, yshift=0.00] {10} (7v3);
+%% 5v7 -> 7v5
+\draw [edge ,blue!40 ,swap] (5v7) -- node[xshift=0.00, yshift=0.00] {12} (7v5);
+%% 2v3 -> 2v5
+\draw [edge ,red!40 ] (2v3) -- node[xshift=0.00, yshift=0.00] {8} (2v5);
+%% 2v3 -> 2v7
+\draw [edge ,red!40 ] (2v3) -- node[xshift=0.00, yshift=0.00] {10} (2v7);
+%% 2v5 -> 2v7
+\draw [edge ,red!40 ] (2v5) -- node[xshift=0.00, yshift=0.00] {12} (2v7);
+%% 3v2 -> 3v5
+\draw [edge ,red!40 ] (3v2) -- node[xshift=0.00, yshift=0.00] {7} (3v5);
+%% 3v2 -> 3v7
+\draw [edge ,red!40 ] (3v2) -- node[xshift=0.00, yshift=0.00] {9} (3v7);
+%% 3v5 -> 3v7
+\draw [edge ,red!40 ] (3v5) -- node[xshift=0.00, yshift=0.00] {12} (3v7);
+%% 5v2 -> 5v3
+\draw [edge ,red!40 ] (5v2) -- node[xshift=0.00, yshift=0.00] {5} (5v3);
+%% 5v2 -> 5v7
+\draw [edge ,red!40 ] (5v2) -- node[xshift=0.00, yshift=0.00] {9} (5v7);
+%% 5v3 -> 5v7
+\draw [edge ,red!40 ] (5v3) -- node[xshift=0.00, yshift=0.00] {10} (5v7);
+%% 7v2 -> 7v3
+\draw [edge ,red!40 ] (7v2) -- node[xshift=0.00, yshift=0.00] {5} (7v3);
+%% 7v2 -> 7v5
+\draw [edge ,red!40 ] (7v2) -- node[xshift=0.00, yshift=0.00] {7} (7v5);
+%% 7v3 -> 7v5
+\draw [edge ,red!40 ] (7v3) -- node[xshift=0.00, yshift=0.00] {8} (7v5);
+\end{tikzpicture}
+

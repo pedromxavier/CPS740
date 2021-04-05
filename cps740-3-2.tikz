@@ -1,0 +1,34 @@
+\begin{tikzpicture}[>= stealth, v/.style = {draw, circle}]
+\node (p1) at (-1.5, 0.0) {};
+\node (p2) at ( 0.0, 3.0) {};
+\node (p3) at ( 1.5, 0.3) {};
+
+%% r
+\node [] at (-0.3, 2.0) {$r$};
+\node [] (r) at (-0.5, 2.2) {};
+\draw [fill=violet!30] (r) circle [radius=2pt];
+
+%% u
+\node at (-0.5, 0.1) {$u$};
+\node [] (u) at (-0.7, 0.3) {};
+\draw [fill=blue!30] (u) circle [radius=2pt];
+
+%% r - u
+\draw [blue!50, dashed] (r) to [out=270,in=135] (u);
+
+%% w
+\node at (1.3, 0.7) {$w$};
+\node [] (w) at (1.1, 0.9) {};
+\draw [fill=red!30] (w) circle [radius=2pt];
+
+%% u - w
+\draw [blue!50, dashed] (u) to [out=0,in=115] (w);
+
+
+\node (plbl) at (0.5, -0.75) {$T$};
+
+%% -------------------------	
+\begin{pgfonlayer}{background}
+\path[expand bubble, fill=teal!10] plot [smooth cycle,tension=1] coordinates {(p1) (p2) (p3)};
+\end{pgfonlayer}
+\end{tikzpicture}

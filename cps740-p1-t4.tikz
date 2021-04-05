@@ -1,0 +1,146 @@
+\begin{tikzpicture}[>= stealth, v/.style = {draw, circle}]
+	\vertex (0) at (0, 0) [fill=blue!30]{};
+	\vertex (1) at (1, 0) [fill=blue!30]{};
+	
+	\draw [gray, thick] (0) -- (1);
+\end{tikzpicture}
+~
+\begin{tikzpicture}[>= stealth, v/.style = {draw, circle}]
+	\vertex (0) at (0, 0) [fill=blue!30]{};
+	\vertex (1) at (1, 0) [fill=blue!30]{};
+	
+	\vertex (2) at (0, 1) [fill=red!30]{};
+	\vertex (3) at (1, 1) [fill=red!30]{};
+	
+	\draw [gray, thick] (0) -- (1);
+	\draw [gray, thick] (2) -- (3);
+	\draw [gray, thick, dashed] (0) -- (2);
+	\draw [gray, thick, dashed] (1) -- (3);
+\end{tikzpicture}
+\hspace{1cm}
+\begin{tikzpicture}[>= stealth, v/.style = {draw, circle}]
+\vertex (0) at (0, 0) [fill=blue!30]{};
+\vertex (1) at (1, 0) [fill=blue!30]{};
+\vertex (2) at (0, 1) [fill=blue!30]{};
+\vertex (3) at (1, 1) [fill=blue!30]{};
+
+\draw [gray, thick] (0) -- (1);
+\draw [gray, thick] (0) -- (2);
+\draw [gray, thick] (1) -- (3);
+\draw [gray, thick] (2) -- (3);
+\end{tikzpicture}
+~
+\begin{tikzpicture}[>= stealth, v/.style = {draw, circle}]
+\vertex (4) at (0.5, 0.5) [fill=red!30]{};
+\vertex (5) at (1.5, 0.5) [fill=red!30]{};
+\vertex (6) at (0.5, 1.5) [fill=red!30]{};
+\vertex (7) at (1.5, 1.5) [fill=red!30]{};
+
+\draw [gray, thick] (4) -- (5);
+\draw [gray, thick] (4) -- (6);
+\draw [gray, thick] (5) -- (7);
+\draw [gray, thick] (6) -- (7);
+
+\vertex (0) at (0, 0) [fill=blue!30]{};
+\vertex (1) at (1, 0) [fill=blue!30]{};
+\vertex (2) at (0, 1) [fill=blue!30]{};
+\vertex (3) at (1, 1) [fill=blue!30]{};
+
+\draw [gray, thick] (0) -- (1);
+\draw [gray, thick] (0) -- (2);
+\draw [gray, thick] (1) -- (3);
+\draw [gray, thick] (2) -- (3);
+
+\draw [gray, thick, dashed] (0) -- (4);
+\draw [gray, thick, dashed] (1) -- (5);
+\draw [gray, thick, dashed] (2) -- (6);
+\draw [gray, thick, dashed] (3) -- (7);
+\end{tikzpicture}
+\\ \vspace{1cm}
+\begin{tikzpicture}[>= stealth, v/.style = {draw, circle}]
+\vertex (4) at (0.5, 0.5) [fill=blue!30]{};
+\vertex (5) at (1.5, 0.5) [fill=blue!30]{};
+\vertex (6) at (0.5, 1.5) [fill=blue!30]{};
+\vertex (7) at (1.5, 1.5) [fill=blue!30]{};
+
+\draw [gray, thick] (4) -- (5);
+\draw [gray, thick] (4) -- (6);
+\draw [gray, thick] (5) -- (7);
+\draw [gray, thick] (6) -- (7);
+
+\vertex (0) at (0, 0) [fill=blue!30]{};
+\vertex (1) at (1, 0) [fill=blue!30]{};
+\vertex (2) at (0, 1) [fill=blue!30]{};
+\vertex (3) at (1, 1) [fill=blue!30]{};
+
+\draw [gray, thick] (0) -- (1);
+\draw [gray, thick] (0) -- (2);
+\draw [gray, thick] (1) -- (3);
+\draw [gray, thick] (2) -- (3);
+
+\draw [gray, thick] (0) -- (4);
+\draw [gray, thick] (1) -- (5);
+\draw [gray, thick] (2) -- (6);
+\draw [gray, thick] (3) -- (7);
+\end{tikzpicture}
+~
+\begin{tikzpicture}[>= stealth, v/.style = {draw, circle}]
+\vertex (12) at (2.5, 0.75) [fill=red!30]{};
+\vertex (13) at (3.5, 0.75) [fill=red!30]{};
+\vertex (14) at (2.5, 1.75) [fill=red!30]{};
+\vertex (15) at (3.5, 1.75) [fill=red!30]{};
+
+\draw [gray, thick] (12) -- (13);
+\draw [gray, thick] (12) -- (14);
+\draw [gray, thick] (13) -- (15);
+\draw [gray, thick] (14) -- (15);
+
+\vertex (8) at (2, 0.25) [fill=red!30]{};
+\vertex (9) at (3, 0.25) [fill=red!30]{};
+\vertex (10) at (2, 1.25) [fill=red!30]{};
+\vertex (11) at (3, 1.25) [fill=red!30]{};
+
+\draw [gray, thick] (8) -- (9);
+\draw [gray, thick] (8) -- (10);
+\draw [gray, thick] (9) -- (11);
+\draw [gray, thick] (10) -- (11);
+
+\draw [gray, thick] (8) -- (12);
+\draw [gray, thick] (9) -- (13);
+\draw [gray, thick] (10) -- (14);
+\draw [gray, thick] (11) -- (15);
+
+\vertex (4) at (0.5, 0.5) [fill=blue!30]{};
+\vertex (5) at (1.5, 0.5) [fill=blue!30]{};
+\vertex (6) at (0.5, 1.5) [fill=blue!30]{};
+\vertex (7) at (1.5, 1.5) [fill=blue!30]{};
+
+\draw [gray, thick] (4) -- (5);
+\draw [gray, thick] (4) -- (6);
+\draw [gray, thick] (5) -- (7);
+\draw [gray, thick] (6) -- (7);
+
+\vertex (0) at (0, 0) [fill=blue!30]{};
+\vertex (1) at (1, 0) [fill=blue!30]{};
+\vertex (2) at (0, 1) [fill=blue!30]{};
+\vertex (3) at (1, 1) [fill=blue!30]{};
+
+\draw [gray, thick] (0) -- (1);
+\draw [gray, thick] (0) -- (2);
+\draw [gray, thick] (1) -- (3);
+\draw [gray, thick] (2) -- (3);
+
+\draw [gray, thick] (0) -- (4);
+\draw [gray, thick] (1) -- (5);
+\draw [gray, thick] (2) -- (6);
+\draw [gray, thick] (3) -- (7);
+
+\draw [gray, thick, dashed] (0) -- (8);
+\draw [gray, thick, dashed] (1) -- (9);
+\draw [gray, thick, dashed] (2) -- (10);
+\draw [gray, thick, dashed] (3) -- (11);
+\draw [gray, thick, dashed] (4) -- (12);
+\draw [gray, thick, dashed] (5) -- (13);
+\draw [gray, thick, dashed] (6) -- (14);
+\draw [gray, thick, dashed] (7) -- (15);
+\end{tikzpicture}

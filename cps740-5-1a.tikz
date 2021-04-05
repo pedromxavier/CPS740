@@ -1,0 +1,73 @@
+\begin{tikzpicture}[
+->,
+>=stealth,
+shorten >=1pt,
+auto,
+thick,
+every node/.style={minimum size=0pt, minimum width = 0em, minimum height = 0em, font={\normalsize\bfseries}},
+vertex/.style={circle,fill=white,draw, minimum width = 3em, minimum height = 3em,
+font={\normalsize\bfseries}},
+edge/.style={->}
+]
+	\def\dx{3.0}
+	\def\dy{1.5}
+	
+	\node [vertex, fill=red!20] (s) [] at (0, 0) [minimum size=20pt] {$s$};
+	
+	%% families
+	\node [vertex, fill=blue!20] (f1) [] at (\dx, \dy) [minimum size=20pt] {$Q_1$};
+	\node [] (dots1) at (\dx, 0.55 * \dy) {$\vdots$};
+	\node [vertex, fill=blue!20] (f2) [] at (\dx, 0) [minimum size=20pt] {$Q_i$};
+	\node [] (dots1) at (\dx, - 0.425 * \dy) {$\vdots$};	
+	\node [vertex, fill=blue!20] (fk) [] at (\dx, -\dy) [minimum size=20pt] {$Q_F$};
+	%% vehicles
+	\node [vertex, fill=red!20] (v1) [] at (2*\dx, \dy) [minimum size=20pt] {$K_1$};
+	\node [] (dots2) at (2*\dx, 0.55 * \dy) {$\vdots$};	
+	\node [vertex, fill=red!20] (v2) [] at (2*\dx, 0) [minimum size=20pt] {$K_j$};
+	\node [] (dots2) at (2*\dx, - 0.425 * \dy) {$\vdots$};	
+	\node [vertex, fill=red!20] (vk) [] at (2*\dx, -\dy) [minimum size=20pt] {$K_V$};
+	
+	
+	
+	\node [vertex, fill=blue!20] (t) [] at (\dx*3, 0) [minimum size=20pt] {$t$};
+	
+	%% origin
+	\draw [edge] (s) -- node[xshift=0, yshift=0] {$p_1$} (f1);
+	\draw [edge] (s) -- node[xshift=0, yshift=0] {$p_i$} (f2);
+	\draw [edge, swap] (s) -- node[xshift=0, yshift=0] {$p_F$} (fk);
+	
+	%% middle
+	\draw [edge, black!50] (fk) -- node[xshift=0, yshift=0] {} (v1);
+	\draw [edge, black!50] (fk) -- node[xshift=0, yshift=0] {} (v2);
+	\draw [edge, swap, black!50] (fk) -- node[xshift=0, yshift=0] {$1$} (vk);
+	
+	\draw [edge, black!75] (f2) -- node[xshift=0, yshift=0] {} (v1);
+	\draw [edge, black!75] (f2) -- node[xshift=0, yshift=0] {} (v2);
+	\draw [edge, black!75] (f2) -- node[xshift=0, yshift=0] {} (vk);
+	
+	\draw [edge] (f1) -- node[xshift=0, yshift=0] {$1$} (v1);
+	\draw [edge] (f1) -- node[xshift=0, yshift=0] {} (v2);
+	\draw [edge] (f1) -- node[xshift=0, yshift=0] {} (vk);
+	
+	%% destination
+	\draw [edge] (v1) -- node[xshift=0, yshift=0] {$l_1$} (t);
+	\draw [edge] (v2) -- node[xshift=0, yshift=0] {$l_j$} (t);
+	\draw [edge, swap] (vk) -- node[xshift=0, yshift=0] {$l_V$} (t);
+	
+
+%	
+%	\draw [edge] (v1) -- node[xshift=-5pt, yshift=0] {$10/2$} (v2);
+%	\draw [edge, swap] (v1) -- node[xshift=-2pt, yshift=2pt] {$3/3$} (v3);
+%	\draw [edge] (v1) -- node[xshift=0, yshift=-2pt] {$5/3$} (v4);
+%	
+%	\draw [edge] (v2) -- node[xshift=5pt, yshift=0] {$3/0$} (v4);
+%	\draw [edge] (v2) -- node[xshift=3pt, yshift=-3pt] {$6/5$} (v5);
+%	\draw [edge, swap] (v2) -- node {$5/1$} (t);
+%	
+%	\draw [edge, swap] (v3) -- node[xshift=2pt, yshift=2pt] {$5/3$} (v4);
+%	\draw [edge, swap] (v3) -- node[xshift=2pt, yshift=2pt] {$3/0$} (v5);
+%	\draw [edge] (v3) -- node[xshift=0, yshift=0] {$4/3$} (t);
+%	
+%	\draw [edge] (v4) -- node[xshift=-5pt, yshift=-2pt] {$8/6$} (v5);
+%	\draw [edge] (v5) -- node[xshift=-10pt, yshift=-2pt] {$12/11$} (t);
+\end{tikzpicture}

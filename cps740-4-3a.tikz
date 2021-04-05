@@ -1,0 +1,26 @@
+\begin{tikzpicture}[
+>=stealth,
+shorten >=1pt,
+auto,
+thick,
+every node/.style={minimum size=0pt, minimum width = 0em, minimum height = 0em, font={\bfseries}},
+vertex/.style={circle,fill=white,draw, minimum width = 3em, minimum height = 3em,
+font={\normalsize\bfseries}},
+edge/.style={->}
+]
+%% x
+\node [vertex] (x) [] at ( 0.00, 0.00) [minimum size=20pt] {$x$};
+%% y
+\node [vertex] (y) [] at (-2.00, 2.00) [minimum size=20pt] {$y$};
+%% z
+\node [vertex] (z) [] at ( 2.00, 2.00) [minimum size=20pt] {$z$};
+
+%% x -> y
+\draw [edge, blue!40] (x) -- node[xshift=0.00, yshift=0.00] {$a$} (y);
+
+%% x -> z
+\draw [edge, blue!40, swap] (x) -- node[xshift=0.00, yshift=0.00] {$b$} (z);
+
+%% y -> z
+\draw [edge, red!40, <-] (y) -- node[xshift=0.00, yshift=0.00] {$-b$} (z);
+\end{tikzpicture}

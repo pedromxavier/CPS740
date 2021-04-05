@@ -1,0 +1,288 @@
+\begin{fig}
+\begin{tikzpicture}[>= stealth, auto, every node/.style = {scale=1.0}, v/.style = {draw, circle}, edge/.style = {draw, -}, scale = 1.0]
+%% Vertices
+	\node (A) [v, blue!30, fill=blue!30] at (1.0, 0) {};
+	\node (B) [v, black, fill=white] at (2.0, -1.5) {};
+	\node (C) [v, black, fill=white] at (4.0, -1.5) {};
+	\node (D) [v, black, fill=white] at (5.0, 0) {};
+	\node (E) [v, black, fill=white] at (2.0, 1.5) {};
+	\node (F) [v, black, fill=white] at (4.0, 1.5) {};
+
+%% Edges
+	\draw [edge, swap] (A) edge node {} (B);
+	\draw [edge] (A) edge node {} (E);
+	\draw [edge, swap] (B) edge node {} (C);
+	\draw [edge] (B) edge node {} (D);
+	\draw [edge, swap] (B) edge node {} (E);
+	\draw [edge, swap] (C) edge node {} (D);
+	\draw [edge, swap] (D) edge node {} (F);
+	\draw [edge] (E) edge node {} (F);
+	\draw [edge, swap] (B) edge node {} (A);
+	\draw [edge] (E) edge node {} (A);
+	\draw [edge, swap] (C) edge node {} (B);
+	\draw [edge] (D) edge node {} (B);
+	\draw [edge, swap] (E) edge node {} (B);
+	\draw [edge, swap] (D) edge node {} (C);
+	\draw [edge, swap] (F) edge node {} (D);
+	\draw [edge] (F) edge node {} (E);
+\node [] at (8.0, 0) {\begin{tabular}{|c|c|c|}
+\hline
+	$v$ & $d(u, v)$ & $\mathbf{r}[v]$\\
+\hline
+
+	A & 0 & A\\
+	B & \infty & \square\\
+	C & \infty & \square\\
+	D & \infty & \square\\
+	E & \infty & \square\\
+	F & \infty & \square\\
+\hline
+\end{tabular}};
+\end{tikzpicture}\\
+\end{fig}\begin{fig}
+\begin{tikzpicture}[>= stealth, auto, every node/.style = {scale=1.0}, v/.style = {draw, circle}, edge/.style = {draw, -}, scale = 1.0]
+%% Vertices
+	\node (A) [v, red!30, fill=red!30] at (1.0, 0) {};
+	\node (B) [v, blue!30, fill=blue!30] at (2.0, -1.5) {};
+	\node (C) [v, black, fill=white] at (4.0, -1.5) {};
+	\node (D) [v, black, fill=white] at (5.0, 0) {};
+	\node (E) [v, blue!30, fill=blue!30] at (2.0, 1.5) {};
+	\node (F) [v, black, fill=white] at (4.0, 1.5) {};
+
+%% Edges
+	\draw [edge, blue!40, swap] (A) edge node {} (B);
+	\draw [edge, blue!40] (A) edge node {} (E);
+	\draw [edge, swap] (B) edge node {} (C);
+	\draw [edge] (B) edge node {} (D);
+	\draw [edge, swap] (B) edge node {} (E);
+	\draw [edge, swap] (C) edge node {} (D);
+	\draw [edge, swap] (D) edge node {} (F);
+	\draw [edge] (E) edge node {} (F);
+	\draw [edge, blue!40, swap] (B) edge node {} (A);
+	\draw [edge, blue!40] (E) edge node {} (A);
+	\draw [edge, swap] (C) edge node {} (B);
+	\draw [edge] (D) edge node {} (B);
+	\draw [edge, swap] (E) edge node {} (B);
+	\draw [edge, swap] (D) edge node {} (C);
+	\draw [edge, swap] (F) edge node {} (D);
+	\draw [edge] (F) edge node {} (E);
+\node [] at (8.0, 0) {\begin{tabular}{|c|c|c|}
+\hline
+	$v$ & $d(u, v)$ & $\mathbf{r}[v]$\\
+\hline
+
+	A & 0 & A\\
+	B & 10 & A\\
+	C & \infty & \square\\
+	D & \infty & \square\\
+	E & 4 & A\\
+	F & \infty & \square\\
+\hline
+\end{tabular}};
+\end{tikzpicture}\\
+\end{fig}\begin{fig}
+\begin{tikzpicture}[>= stealth, auto, every node/.style = {scale=1.0}, v/.style = {draw, circle}, edge/.style = {draw, -}, scale = 1.0]
+%% Vertices
+	\node (A) [v, red!30, fill=red!30] at (1.0, 0) {};
+	\node (B) [v, blue!30, fill=blue!30] at (2.0, -1.5) {};
+	\node (C) [v, black, fill=white] at (4.0, -1.5) {};
+	\node (D) [v, black, fill=white] at (5.0, 0) {};
+	\node (E) [v, red!30, fill=red!30] at (2.0, 1.5) {};
+	\node (F) [v, blue!30, fill=blue!30] at (4.0, 1.5) {};
+
+%% Edges
+	\draw [edge, red!40, swap] (A) edge node {} (B);
+	\draw [edge, red!40] (A) edge node {} (E);
+	\draw [edge, swap] (B) edge node {} (C);
+	\draw [edge] (B) edge node {} (D);
+	\draw [edge, blue!40, swap] (B) edge node {} (E);
+	\draw [edge, swap] (C) edge node {} (D);
+	\draw [edge, swap] (D) edge node {} (F);
+	\draw [edge, blue!40] (E) edge node {} (F);
+	\draw [edge, red!40, swap] (B) edge node {} (A);
+	\draw [edge, red!40] (E) edge node {} (A);
+	\draw [edge, swap] (C) edge node {} (B);
+	\draw [edge] (D) edge node {} (B);
+	\draw [edge, blue!40, swap] (E) edge node {} (B);
+	\draw [edge, swap] (D) edge node {} (C);
+	\draw [edge, swap] (F) edge node {} (D);
+	\draw [edge, blue!40] (F) edge node {} (E);
+\node [] at (8.0, 0) {\begin{tabular}{|c|c|c|}
+\hline
+	$v$ & $d(u, v)$ & $\mathbf{r}[v]$\\
+\hline
+
+	A & 0 & A\\
+	B & 10 & A\\
+	C & \infty & \square\\
+	D & \infty & \square\\
+	E & 4 & A\\
+	F & 16 & E\\
+\hline
+\end{tabular}};
+\end{tikzpicture}\\
+\end{fig}\begin{fig}
+\begin{tikzpicture}[>= stealth, auto, every node/.style = {scale=1.0}, v/.style = {draw, circle}, edge/.style = {draw, -}, scale = 1.0]
+%% Vertices
+	\node (A) [v, red!30, fill=red!30] at (1.0, 0) {};
+	\node (B) [v, red!30, fill=red!30] at (2.0, -1.5) {};
+	\node (C) [v, blue!30, fill=blue!30] at (4.0, -1.5) {};
+	\node (D) [v, blue!30, fill=blue!30] at (5.0, 0) {};
+	\node (E) [v, red!30, fill=red!30] at (2.0, 1.5) {};
+	\node (F) [v, black, fill=white] at (4.0, 1.5) {};
+
+%% Edges
+	\draw [edge, red!40, swap] (A) edge node {} (B);
+	\draw [edge, red!40] (A) edge node {} (E);
+	\draw [edge, blue!40, swap] (B) edge node {} (C);
+	\draw [edge, blue!40] (B) edge node {} (D);
+	\draw [edge, swap] (B) edge node {} (E);
+	\draw [edge, swap] (C) edge node {} (D);
+	\draw [edge, swap] (D) edge node {} (F);
+	\draw [edge, red!40] (E) edge node {} (F);
+	\draw [edge, red!40, swap] (B) edge node {} (A);
+	\draw [edge, red!40] (E) edge node {} (A);
+	\draw [edge, blue!40, swap] (C) edge node {} (B);
+	\draw [edge, blue!40] (D) edge node {} (B);
+	\draw [edge, swap] (E) edge node {} (B);
+	\draw [edge, swap] (D) edge node {} (C);
+	\draw [edge, swap] (F) edge node {} (D);
+	\draw [edge, red!40] (F) edge node {} (E);
+\node [] at (8.0, 0) {\begin{tabular}{|c|c|c|}
+\hline
+	$v$ & $d(u, v)$ & $\mathbf{r}[v]$\\
+\hline
+
+	A & 0 & A\\
+	B & 10 & A\\
+	C & 11 & B\\
+	D & 12 & B\\
+	E & 4 & A\\
+	F & 16 & E\\
+\hline
+\end{tabular}};
+\end{tikzpicture}\\
+\end{fig}\begin{fig}
+\begin{tikzpicture}[>= stealth, auto, every node/.style = {scale=1.0}, v/.style = {draw, circle}, edge/.style = {draw, -}, scale = 1.0]
+%% Vertices
+	\node (A) [v, red!30, fill=red!30] at (1.0, 0) {};
+	\node (B) [v, red!30, fill=red!30] at (2.0, -1.5) {};
+	\node (C) [v, red!30, fill=red!30] at (4.0, -1.5) {};
+	\node (D) [v, blue!30, fill=blue!30] at (5.0, 0) {};
+	\node (E) [v, red!30, fill=red!30] at (2.0, 1.5) {};
+	\node (F) [v, black, fill=white] at (4.0, 1.5) {};
+
+%% Edges
+	\draw [edge, red!40, swap] (A) edge node {} (B);
+	\draw [edge, red!40] (A) edge node {} (E);
+	\draw [edge, red!40, swap] (B) edge node {} (C);
+	\draw [edge, red!40] (B) edge node {} (D);
+	\draw [edge, swap] (B) edge node {} (E);
+	\draw [edge, blue!40, swap] (C) edge node {} (D);
+	\draw [edge, swap] (D) edge node {} (F);
+	\draw [edge, red!40] (E) edge node {} (F);
+	\draw [edge, red!40, swap] (B) edge node {} (A);
+	\draw [edge, red!40] (E) edge node {} (A);
+	\draw [edge, red!40, swap] (C) edge node {} (B);
+	\draw [edge, red!40] (D) edge node {} (B);
+	\draw [edge, swap] (E) edge node {} (B);
+	\draw [edge, blue!40, swap] (D) edge node {} (C);
+	\draw [edge, swap] (F) edge node {} (D);
+	\draw [edge, red!40] (F) edge node {} (E);
+\node [] at (8.0, 0) {\begin{tabular}{|c|c|c|}
+\hline
+	$v$ & $d(u, v)$ & $\mathbf{r}[v]$\\
+\hline
+
+	A & 0 & A\\
+	B & 10 & A\\
+	C & 11 & B\\
+	D & 12 & B\\
+	E & 4 & A\\
+	F & 16 & E\\
+\hline
+\end{tabular}};
+\end{tikzpicture}\\
+\end{fig}\begin{fig}
+\begin{tikzpicture}[>= stealth, auto, every node/.style = {scale=1.0}, v/.style = {draw, circle}, edge/.style = {draw, -}, scale = 1.0]
+%% Vertices
+	\node (A) [v, red!30, fill=red!30] at (1.0, 0) {};
+	\node (B) [v, red!30, fill=red!30] at (2.0, -1.5) {};
+	\node (C) [v, red!30, fill=red!30] at (4.0, -1.5) {};
+	\node (D) [v, red!30, fill=red!30] at (5.0, 0) {};
+	\node (E) [v, red!30, fill=red!30] at (2.0, 1.5) {};
+	\node (F) [v, blue!30, fill=blue!30] at (4.0, 1.5) {};
+
+%% Edges
+	\draw [edge, red!40, swap] (A) edge node {} (B);
+	\draw [edge, red!40] (A) edge node {} (E);
+	\draw [edge, red!40, swap] (B) edge node {} (C);
+	\draw [edge, red!40] (B) edge node {} (D);
+	\draw [edge, swap] (B) edge node {} (E);
+	\draw [edge, swap] (C) edge node {} (D);
+	\draw [edge, blue!40, swap] (D) edge node {} (F);
+	\draw [edge, red!40] (E) edge node {} (F);
+	\draw [edge, red!40, swap] (B) edge node {} (A);
+	\draw [edge, red!40] (E) edge node {} (A);
+	\draw [edge, red!40, swap] (C) edge node {} (B);
+	\draw [edge, red!40] (D) edge node {} (B);
+	\draw [edge, swap] (E) edge node {} (B);
+	\draw [edge, swap] (D) edge node {} (C);
+	\draw [edge, blue!40, swap] (F) edge node {} (D);
+	\draw [edge, red!40] (F) edge node {} (E);
+\node [] at (8.0, 0) {\begin{tabular}{|c|c|c|}
+\hline
+	$v$ & $d(u, v)$ & $\mathbf{r}[v]$\\
+\hline
+
+	A & 0 & A\\
+	B & 10 & A\\
+	C & 11 & B\\
+	D & 12 & B\\
+	E & 4 & A\\
+	F & 16 & E\\
+\hline
+\end{tabular}};
+\end{tikzpicture}\\
+\end{fig}\begin{fig}
+\begin{tikzpicture}[>= stealth, auto, every node/.style = {scale=1.0}, v/.style = {draw, circle}, edge/.style = {draw, -}, scale = 1.0]
+%% Vertices
+	\node (A) [v, red!30, fill=red!30] at (1.0, 0) {};
+	\node (B) [v, red!30, fill=red!30] at (2.0, -1.5) {};
+	\node (C) [v, red!30, fill=red!30] at (4.0, -1.5) {};
+	\node (D) [v, red!30, fill=red!30] at (5.0, 0) {};
+	\node (E) [v, red!30, fill=red!30] at (2.0, 1.5) {};
+	\node (F) [v, red!30, fill=red!30] at (4.0, 1.5) {};
+
+%% Edges
+	\draw [edge, red!40, swap] (A) edge node {} (B);
+	\draw [edge, red!40] (A) edge node {} (E);
+	\draw [edge, red!40, swap] (B) edge node {} (C);
+	\draw [edge, red!40] (B) edge node {} (D);
+	\draw [edge, swap] (B) edge node {} (E);
+	\draw [edge, swap] (C) edge node {} (D);
+	\draw [edge, swap] (D) edge node {} (F);
+	\draw [edge, red!40] (E) edge node {} (F);
+	\draw [edge, red!40, swap] (B) edge node {} (A);
+	\draw [edge, red!40] (E) edge node {} (A);
+	\draw [edge, red!40, swap] (C) edge node {} (B);
+	\draw [edge, red!40] (D) edge node {} (B);
+	\draw [edge, swap] (E) edge node {} (B);
+	\draw [edge, swap] (D) edge node {} (C);
+	\draw [edge, swap] (F) edge node {} (D);
+	\draw [edge, red!40] (F) edge node {} (E);
+\node [] at (8.0, 0) {\begin{tabular}{|c|c|c|}
+\hline
+	$v$ & $d(u, v)$ & $\mathbf{r}[v]$\\
+\hline
+
+	A & 0 & A\\
+	B & 10 & A\\
+	C & 11 & B\\
+	D & 12 & B\\
+	E & 4 & A\\
+	F & 16 & E\\
+\hline
+\end{tabular}};
+\end{tikzpicture}\\
+\end{fig}

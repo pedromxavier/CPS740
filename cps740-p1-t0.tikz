@@ -1,0 +1,9 @@
+\begin{tikzpicture}[>= stealth, v/.style = {draw, circle}]
+	\node [vertex, minimum size=20pt] (1) at (-3, 0) [fill=blue!30]{H};
+	\node [vertex, minimum size=56pt] (2) at ( 0, 0) [fill=red!30]{C};
+	\node [vertex, minimum size=52pt] (3) at ( 3, 0) [fill=yellow!30]{N};
+	
+	\draw (1) -- (2);
+	\draw (2) -- (3);
+	
+\end{tikzpicture}

@@ -1,0 +1,7 @@
+\begin{tikzpicture}[>= stealth, v/.style = {draw, circle}]
+	\draw[yellow!30, fill=yellow!30] (-\textwidth/4, \textwidth/4) rectangle (\textwidth/4, -\textwidth/4);
+	
+	\draw[gray!50, dashed] (0, \textwidth/4) -- (0, -\textwidth/4);
+	
+	\gsample[16]{\textwidth / 2}{2}
+\end{tikzpicture}

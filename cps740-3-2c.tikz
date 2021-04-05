@@ -1,0 +1,62 @@
+\begin{tikzpicture}[>= stealth, v/.style = {draw, circle}]
+\node (p1) at (-1.5, 0.0) {};
+\node (p2) at ( 0.0, 3.0) {};
+\node (p3) at ( 1.5, 0.3) {};
+
+%% r
+\node [] at (-0.3, 2.0) {$r$};
+\node [] (r) at (-0.5, 2.2) {};
+\draw [fill=violet!30] (r) circle [radius=2pt];
+
+%% s
+\node [] at (-0.6, 1.3) {$s$};
+\node [] (s) at (-0.8, 1.5) {};
+\draw [fill=teal!30] (s) circle [radius=2pt];
+
+%% r - s
+\draw [blue!50] (r) to [out=270,in=90] (s);
+
+%% \Gamma
+\node [] at (-1.1, 1.2) {\color{blue!80}$\Gamma$};
+
+%% u
+\node at (-0.7, 0.0) {$u$};
+\node [] (u) at (-0.9, 0.2) {};
+\draw [fill=blue!30] (u) circle [radius=2pt];
+
+%% s - u
+\draw [blue!50] (s) to [out=270,in=125] (u);
+
+%%% w
+%\node at (1.3, 0.7) {$w$};
+%\node [] (w) at (1.1, 0.9) {};
+%\draw [fill=red!30] (w) circle [radius=2pt];
+%
+%%% u - w
+%\draw [blue!50] (u) to [out=125,in=115] (w);
+
+%% x
+\node at (-0.25, 0.6) {$x$};
+\node [] (x) at (-0.45, 0.8) {};
+\draw [fill=yellow!40] (x) circle [radius=2pt];
+
+%% y
+\node at (0.8, 2.1) {$y$};
+\node [] (y) at (0.6, 2.3) {};
+\draw [fill=orange!30] (y) circle [radius=2pt];
+
+%% x - y
+\draw [blue!50, dashed] (x) to [out=90,in=295] (s);
+\draw [blue!50, dashed] (s) to [out=45,in=270] (y);
+
+%% \Lambda
+\node [] at (-0.1, 1.4) {\color{blue!80}$\Lambda$};
+
+\node (plbl) at (0.5, -0.75) {$T$};
+
+%% -------------------------	
+\begin{pgfonlayer}{background}
+\path[expand bubble, fill=teal!10] plot [smooth cycle,tension=1] coordinates {(p1) (p2) (p3)};
+\end{pgfonlayer}
+\end{tikzpicture}
+

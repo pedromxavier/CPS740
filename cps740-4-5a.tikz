@@ -1,0 +1,24 @@
+\newcommand{\checkx}[4]{%% {x}{y}{w}{h}
+	\draw [fill=white] (#1 * #3, #2 * #4) rectangle (#1 * #3 + #3, #2 * #4 + #4);
+	\draw [fill=black] (#1 * #3 + #3, #2 * #4) rectangle (#1 * #3 + #3 +#3, #2 * #4 + #4);
+}
+
+\newcommand{\checky}[4]{%% {x}{y}{w}{h}
+	\draw [fill=black] (#1 * #3, #2 * #4) rectangle (#1 * #3 + #3, #2 * #4 + #4);
+	\draw [fill=white] (#1 * #3 + #3, #2 * #4) rectangle (#1 * #3 + #3 +#3, #2 * #4 + #4);
+}
+
+\begin{tikzpicture}
+
+\def\w{0.33}
+\def\h{0.33}
+
+\foreach \ii in {0, 2, ..., 6}{%%
+	\foreach \jj in {1, 3, ..., 7}{%%
+		\checky{\ii}{\jj}{\w}{\h}	
+	}
+	\foreach \jj in {0, 2, ..., 6}{%%
+		\checkx{\ii}{\jj}{\w}{\h}
+	}
+}
+\end{tikzpicture}

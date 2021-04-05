@@ -1,0 +1,8 @@
+\begin{tikzpicture}[>= stealth, v/.style = {draw, circle}]
+	\isample[50]{\textwidth / 2}{2}
+	
+	\node (S1) [] at ( -\textwidth/6, -\textwidth/4) {$S_2$};
+	\node (S1) [] at ( -\textwidth/3, -\textwidth/4) {$S_1$};
+	
+	\node (R) [] at (\textwidth/2, -2) {$\mathbb{R}^2$};
+\end{tikzpicture}
